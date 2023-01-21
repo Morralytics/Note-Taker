@@ -12,5 +12,7 @@ notes.get('/', (req, res) => {
 });
 
 notes.post('/', (req, res) => {
-    
-})
+
+});
+
+module.exports = notes;
