@@ -24,3 +24,5 @@ const readAndAppend = (file, content) => {
         }
     });
 };
+
+module.exports = { readFile, writeToFile, readAndAppend };
