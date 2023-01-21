@@ -3,7 +3,7 @@ const fs = require('fs');
 const util = require('util');
 
 // Turns fs.readFile into a promise
-const readFile = util.promisify(fs.readFile);
+const readFromFile = util.promisify(fs.readFile);
 
 // Function that writes our file given the where and what
 const writeToFile = (path, content) => {
@@ -25,4 +25,4 @@ const readAndAppend = (file, content) => {
     });
 };
 
-module.exports = { readFile, writeToFile, readAndAppend };
+module.exports = { readFromFile, writeToFile, readAndAppend };
