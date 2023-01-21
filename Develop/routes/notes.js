@@ -10,3 +10,7 @@ notes.get('/', (req, res) => {
             res.json(JSON.parse(data));
         });
 });
+
+notes.post('/', (req, res) => {
+    
+})
