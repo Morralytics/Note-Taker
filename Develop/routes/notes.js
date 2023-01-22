@@ -20,14 +20,19 @@ notes.post('/', (req, res) => {
     if (req.body) {
         const newNote = {
             title,
-            text
-        }
+            text,
+            id: uuid(),
+        };
         
         readAndAppend(newNote, './db/db.json');
         res.json(`Successfully added new note.`);
     } else {
         res.error(`Error adding note.`)
     }
+});
+
+notes.delete('/', (req, res) => {
+    console.log(`${req.method} request received to delete a note.`)
 });
 
 module.exports = notes;
