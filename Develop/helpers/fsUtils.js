@@ -13,7 +13,7 @@ const writeToFile = (path, content) => {
 };
 
 // Function that reads the file and can append the same data to a file
-const readAndAppend = (file, content) => {
+const readAndAppend = (content, file) => {
     fs.readFile(file, 'utf8', (err, data) => {
         if (err) {
             console.error(err);

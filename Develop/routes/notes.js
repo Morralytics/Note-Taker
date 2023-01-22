@@ -15,7 +15,19 @@ notes.get('/', (req, res) => {
 notes.post('/', (req, res) => {
     console.log(`${req.method} request received to add a note.`);
 
-    
+    const { title, text } = req.body;
+
+    if (req.body) {
+        const newNote = {
+            title,
+            text
+        }
+        
+        readAndAppend(newNote, './db/db.json');
+        res.json(`Successfully added new note.`);
+    } else {
+        res.error(`Error adding note.`)
+    }
 });
 
 module.exports = notes;
