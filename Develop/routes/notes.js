@@ -34,7 +34,7 @@ notes.post('/', (req, res) => {
 notes.delete('/:id', (req, res) => {
     console.log(`${req.method} request received to delete a note.`);
 
-    const { id } = req.params;
+    const id = parseInt(req.params.id);
 
     console.log(id);
 });
