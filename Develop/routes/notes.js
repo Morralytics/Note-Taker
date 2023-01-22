@@ -13,7 +13,9 @@ notes.get('/', (req, res) => {
 });
 
 notes.post('/', (req, res) => {
+    console.log(`${req.method} request received to add a note.`);
 
+    
 });
 
 module.exports = notes;
