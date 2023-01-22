@@ -31,8 +31,12 @@ notes.post('/', (req, res) => {
     }
 });
 
-notes.delete('/', (req, res) => {
-    console.log(`${req.method} request received to delete a note.`)
+notes.delete('/:id', (req, res) => {
+    console.log(`${req.method} request received to delete a note.`);
+
+    const { id } = req.params;
+
+    console.log(id);
 });
 
 module.exports = notes;
